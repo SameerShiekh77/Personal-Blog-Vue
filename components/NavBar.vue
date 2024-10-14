@@ -29,21 +29,26 @@ import { RouterLink } from 'vue-router'
         <div class="nav-links">
             <ul class="flex space-x-10">
                 <li>
-                    <RouterLink to="/" class="text-black cursor-pointer hover:underline "> Home</RouterLink>
+                    <RouterLink to="/" class="text-black cursor-pointer hover:underline ">Home</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline"> About</RouterLink>
+                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline">About</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline"> Blog</RouterLink>
+                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline">Blog</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline"> Contact</RouterLink>
+                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline">Caree</RouterLink>
+                    <span
+                            class="mx-3 rounded-full px-2 bg-[#1C5CFF] text-white">hiring</span>
+                </li>
+                <li>
+                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline">Contact</RouterLink>
                 </li>
             </ul>
         </div>
 
-        <div class="button mx-5 flex items-center justify-center w-48 bg-[#1C5CFF] rounded-md">
+        <div class="button mx-5 flex items-center justify-center w-48 bg-[[#1C5CFF]] rounded-md">
             <button class="text-white py-3 px-5 rounded-md font-semibold">Get Started
 
             </button>

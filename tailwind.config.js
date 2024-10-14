@@ -10,7 +10,13 @@ export default {
   ],
   
   theme: {
-    extend: {},
+    
+    extend: {
+      colors: {
+        blueColor: "#1C5CFF",
+        grayColor: "#7D7D7D"
+      }
+    },
   },
   plugins: [],
 }
