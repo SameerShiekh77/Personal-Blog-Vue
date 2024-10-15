@@ -1,5 +1,11 @@
 <script setup>
 import NavBar from '../../components/NavBar.vue';
+import SideFilter from '../../components/SideFilter.vue';
+import BlogCard from '../../components/BlogCard.vue';
+import SimpleButton from '../../components/SimpleButton.vue';
+
+let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artificial Intelligence', 'Work'], second_part: ['Guidelines', 'Mentorship', 'Tutorial', 'Training', 'Career', 'Self Care'] }
+
 </script>
 
 <template>
@@ -55,11 +61,20 @@ import NavBar from '../../components/NavBar.vue';
         <p></p>
       </div>
       <div class="buttons flex justify-center items-center space-x-10">
-        <button class="text-[#797979] rounded-full px-8 py-2 border border-[#797979] bg-white hover:bg-[#797979] hover:text-white cursor-pointer">Design Thinking</button>
-        <button class="text-[#797979] rounded-full px-8 py-2 border border-[#797979] bg-white hover:bg-[#797979] hover:text-white cursor-pointer">Technology</button>
-        <button class="text-[#797979] rounded-full px-8 py-2 border border-[#797979] bg-white hover:bg-[#797979] hover:text-white cursor-pointer">Web3</button>
-        <button class="text-[#797979] rounded-full px-8 py-2 border border-[#797979] bg-white hover:bg-[#797979] hover:text-white cursor-pointer">Programming</button>
-        <button class="text-[#797979] rounded-full px-8 py-2 border border-[#797979] bg-white hover:bg-[#797979] hover:text-white cursor-pointer">AI</button>
+        <SimpleButton name="Design Thinking" />
+        <SimpleButton name="Technology" />
+        <SimpleButton name="Web3" />
+        <SimpleButton name="Programming" />
+        <SimpleButton name="AI" />
+        
+        
+      </div>
+      <div class="flex justify-around">
+        <div class="space-y-10">
+          <SideFilter title="Blog Title" :side-links="links['first_part']" />
+          <SideFilter title="Guide and Tools" :side-links="links['second_part']" />
+        </div>
+        <BlogCard />
       </div>
     </section>
   </div>
