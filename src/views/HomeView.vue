@@ -69,12 +69,12 @@ let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artific
         
         
       </div>
-      <div class="flex justify-around">
-        <div class="space-y-10">
+      <div class="flex justify-around ">
+        <div class="space-y-10 w-[15%]">
           <SideFilter title="Blog Title" :side-links="links['first_part']" />
           <SideFilter title="Guide and Tools" :side-links="links['second_part']" />
         </div>
-        <BlogCard />
+        <BlogCard class="w-full"/>
       </div>
     </section>
   </div>

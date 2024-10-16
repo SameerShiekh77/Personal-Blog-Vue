@@ -7,15 +7,15 @@ import SimpleButton from './SimpleButton.vue';
     <div class="flex flex-col">
 
         <div class="flex justify-around my-7">
-            <div>
-                <p>Mar 1</p>
-                <h1 class="text-3xl font-bold w-[450px]">Powerful Trading Tools and Features for Experienced Investors
+            <div class="space-y-4">
+                <p class="text-[#1C5CFF]">Mar 1</p>
+                <h1 class="text-3xl font-bold w-[513px]">Powerful Trading Tools and Features for Experienced Investors
                 </h1>
-                <p class="text-[#7D7D7D] w-96">I’m always trying to think of new and interesting
+                <p class="text-[#7D7D7D] w-[313px]">I’m always trying to think of new and interesting
                     business ideas. I generally try to come up with ideas
                     by thinking of what I would want to do or see in the
                     world. Then, I try to find reasons why it wouldn’t work...</p>
-                <div>
+                <div class="flex  items-center space-x-9">
                     <SimpleButton name="Tools" />
                     <p class="text-[#7D7D7D]">By Mark Tuchel</p>
                     <p class="text-[#1C5CFF]">7 min read</p>
@@ -28,15 +28,15 @@ import SimpleButton from './SimpleButton.vue';
 
         </div>
         <div class="flex justify-around my-7">
-            <div>
-                <p>Mar 1</p>
-                <h1 class="text-3xl font-bold w-[450px]">Powerful Trading Tools and Features for Experienced Investors
+            <div class="space-y-4">
+                <p class="text-[#1C5CFF]">Mar 1</p>
+                <h1 class="text-3xl font-bold w-[513px]">Powerful Trading Tools and Features for Experienced Investors
                 </h1>
-                <p class="text-[#7D7D7D] w-96">I’m always trying to think of new and interesting
+                <p class="text-[#7D7D7D] w-[313px]">I’m always trying to think of new and interesting
                     business ideas. I generally try to come up with ideas
                     by thinking of what I would want to do or see in the
                     world. Then, I try to find reasons why it wouldn’t work...</p>
-                <div>
+                <div class="flex  items-center space-x-9">
                     <SimpleButton name="Tools" />
                     <p class="text-[#7D7D7D]">By Mark Tuchel</p>
                     <p class="text-[#1C5CFF]">7 min read</p>
