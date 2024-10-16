@@ -1,8 +1,8 @@
 <script setup>
 import NavBar from '../../components/NavBar.vue';
 import SideFilter from '../../components/SideFilter.vue';
-import BlogCard from '../../components/BlogCard.vue';
 import SimpleButton from '../../components/SimpleButton.vue';
+import BlogsPanel from '../../components/BlogsPanel.vue';
 
 let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artificial Intelligence', 'Work'], second_part: ['Guidelines', 'Mentorship', 'Tutorial', 'Training', 'Career', 'Self Care'] }
 
@@ -24,7 +24,7 @@ let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artific
               <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M6.43695 17L5.12445 15.6875L14.1245 6.68753H6.06195V4.81253H17.3119V16.0625H15.4369V8.00003L6.43695 17Z"
-                  fill="[#1C5CFF]" />
+                  fill="blue" />
               </svg>
             </span>
           </div>
@@ -66,15 +66,15 @@ let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artific
         <SimpleButton name="Web3" />
         <SimpleButton name="Programming" />
         <SimpleButton name="AI" />
-        
-        
+
+
       </div>
       <div class="flex justify-around ">
         <div class="space-y-10 w-[15%]">
           <SideFilter title="Blog Title" :side-links="links['first_part']" />
           <SideFilter title="Guide and Tools" :side-links="links['second_part']" />
         </div>
-        <BlogCard class="w-full"/>
+        <BlogsPanel class="w-full" />
       </div>
     </section>
   </div>
