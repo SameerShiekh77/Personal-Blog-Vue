@@ -2,10 +2,11 @@
 </script>
 
 <template>
-    <section class="bg-[url('../public/footer-bg.png')] py-3 mt-8">
+    <section class="bg-[url('../public/footer-bg.png')] py-3 my-12">
 
         <div class="px-40 py-7 space-y-4">
-            <a href="#" class="text-[#1C5CFF] text-xl">Stay up to date</a>
+            <a href="#" class="hover:underline decoration-[#1C5CFF] text-[#1C5CFF] text-lg cursor-pointer">Stay up to
+                date</a>
             <h3 class="text-4xl font-bold">Join Our Newsletter</h3>
             <form class="space-x-6">
                 <input type="email" name="email" required

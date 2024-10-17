@@ -29,21 +29,20 @@ import { RouterLink } from 'vue-router'
         <div class="nav-links">
             <ul class="flex space-x-10">
                 <li>
-                    <RouterLink to="/" class="text-black cursor-pointer hover:underline ">Home</RouterLink>
+                    <RouterLink to="/" class="text-black text-lg cursor-pointer hover:underline ">Home</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline">About</RouterLink>
+                    <RouterLink to="#" class="text-gray-400 text-lg cursor-pointer hover:underline">About</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline">Blog</RouterLink>
+                    <RouterLink to="#" class="text-gray-400 text-lg cursor-pointer hover:underline">Blog</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline">Caree</RouterLink>
-                    <span
-                            class="mx-3 rounded-full px-2 bg-[#1C5CFF] text-white">hiring</span>
+                    <RouterLink to="#" class="text-gray-400 text-lg cursor-pointer hover:underline">Career</RouterLink>
+                    <span class="mx-3 rounded-full px-2 bg-[#1C5CFF] text-white">hiring</span>
                 </li>
                 <li>
-                    <RouterLink to="#" class="text-gray-400 cursor-pointer hover:underline">Contact</RouterLink>
+                    <RouterLink to="#" class="text-gray-400 text-lg cursor-pointer hover:underline">Contact</RouterLink>
                 </li>
             </ul>
         </div>
