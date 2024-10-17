@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
 
-    <div class="flex justify-between items-center my-10">
+    <div class="flex justify-between items-center py-10">
         <div class="logo flex space-x-20 items-center">
             <div class="flex space-x-3 items-center">
                 <img src="../public/logo.png" alt="">

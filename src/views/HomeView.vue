@@ -3,13 +3,16 @@ import NavBar from '../../components/NavBar.vue';
 import SideFilter from '../../components/SideFilter.vue';
 import SimpleButton from '../../components/SimpleButton.vue';
 import BlogsPanel from '../../components/BlogsPanel.vue';
+import WebFooter from '../../components/WebFooter.vue';
 
 let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artificial Intelligence', 'Work'], second_part: ['Guidelines', 'Mentorship', 'Tutorial', 'Training', 'Career', 'Self Care'] }
 
 </script>
 
-<template>
-  <div class="container mx-auto">
+<template >
+  <div class="bg-[#F9F9F9]">
+    <div class="container mx-auto w-full">
+
     <NavBar />
 
     <!-- Header Created -->
@@ -77,5 +80,9 @@ let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artific
         <BlogsPanel class="w-full" />
       </div>
     </section>
+
+    <!-- footer section -->
+    <WebFooter />
+    </div>
   </div>
 </template>
