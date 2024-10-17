@@ -1,17 +1,3 @@
-<script setup>
-import NavBar from '../../components/NavBar.vue';
-import SideFilter from '../../components/SideFilter.vue';
-import SimpleButton from '../../components/SimpleButton.vue';
-import BlogsPanel from '../../components/BlogsPanel.vue';
-import WebFooter from '../../components/WebFooter.vue';
-
-let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artificial Intelligence', 'Work'], second_part: ['Guidelines', 'Mentorship', 'Tutorial', 'Training', 'Career', 'Self Care'] }
-
-const buttons_names = ['All', 'Design Thinking', 'Technology', 'Web3', 'Programming', 'AI']
-
-
-</script>
-
 <template>
   <div class="bg-[#F9F9F9]">
     <div class="container mx-auto w-full">
@@ -63,10 +49,14 @@ const buttons_names = ['All', 'Design Thinking', 'Technology', 'Web3', 'Programm
 
       <section class="">
         <div class="heading flex justify-around items-center my-6">
-          <p class="text-[#1C5CFF] text-2xl">Trending Topics</p>
+          <p class="text-[#1C5CFF] text-2xl">Trending Topics </p>
         </div>
         <div class="buttons flex justify-center items-center space-x-10">
-          <SimpleButton v-for="(buttons_name, index) in buttons_names" :key="index" :name="buttons_name" />
+          <SimpleButton v-for="(button_name, index) in buttons_names" :key="index" :name="button_name"
+            @click="toggleFunction(button_name)" :class="{
+              'bg-[#797979] text-white': button_name == tag_name
+            }" />
+
 
 
         </div>
@@ -75,7 +65,7 @@ const buttons_names = ['All', 'Design Thinking', 'Technology', 'Web3', 'Programm
             <SideFilter title="Blog Title" :side-links="links['first_part']" />
             <SideFilter title="Guide and Tools" :side-links="links['second_part']" />
           </div>
-          <BlogsPanel class="w-full" />
+          <BlogsPanel class="w-full" :tagName="tag_name" />
         </div>
       </section>
 
@@ -84,3 +74,24 @@ const buttons_names = ['All', 'Design Thinking', 'Technology', 'Web3', 'Programm
     </div>
   </div>
 </template>
+
+
+<script setup>
+import NavBar from '../../components/NavBar.vue';
+import SideFilter from '../../components/SideFilter.vue';
+import SimpleButton from '../../components/SimpleButton.vue';
+import BlogsPanel from '../../components/BlogsPanel.vue';
+import WebFooter from '../../components/WebFooter.vue';
+import { ref } from 'vue';
+
+let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artificial Intelligence', 'Work'], second_part: ['Guidelines', 'Mentorship', 'Tutorial', 'Training', 'Career', 'Self Care'] }
+
+const buttons_names = ['All', 'Design Thinking', 'Technology', 'Web3', 'Programming', 'AI']
+
+let tag_name = ref('All')
+
+function toggleFunction(name) {
+  tag_name.value = name
+}
+
+</script>
