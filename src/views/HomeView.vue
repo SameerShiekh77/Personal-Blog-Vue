@@ -10,8 +10,10 @@
           <div class="content space-y-4">
 
             <div class="flex items-center">
-              <p class="hover:underline decoration-[#1C5CFF] text-[#1C5CFF] text-lg cursor-pointer">See Coranu Tutorial
-              </p>
+              <a href="https://www.figma.com/design/LrvytBrzo6CQ6VyG5rcuvo/Blog-UI-design-(Community)?node-id=25-1182&node-type=canvas&t=AbCPqEUouwjVhwTh-0"
+                class="hover:underline decoration-[#1C5CFF] text-[#1C5CFF] text-lg cursor-pointer" target="_blank">See
+                Coranu Tutorial
+              </a>
               <span>
                 <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -49,23 +51,23 @@
 
       <section class="">
         <div class="heading flex justify-around items-center my-6">
-          <p class="text-[#1C5CFF] text-2xl">Trending Topics </p>
+          <p class="text-[#1C5CFF] text-3xl font-semibold py-5">Trending Topics </p>
         </div>
         <div class="buttons flex justify-center items-center space-x-10">
           <SimpleButton v-for="(button_name, index) in buttons_names" :key="index" :name="button_name"
-            @click="toggleFunction(button_name)" :class="{
-              'bg-[#797979] text-white': button_name == tag_name
-            }" />
+            @click="toggleFunction(button_name)" :class="{ '!bg-[#797979] text-white': button_name == tag_name }" />
 
 
 
         </div>
         <div class="flex justify-around my-9">
           <div class="space-y-10 w-[15%]">
-            <SideFilter title="Blog Title" :side-links="links['first_part']" />
-            <SideFilter title="Guide and Tools" :side-links="links['second_part']" />
+            <SideFilter title="Blog Title" :side-links="links['first_part']" @categoryFilter="filterByCategory"
+              :categoryName="category_name" />
+            <SideFilter title="Guide and Tools" :side-links="links['second_part']" @categoryFilter="filterByCategory"
+              :categoryName="category_name" />
           </div>
-          <BlogsPanel class="w-full" :tagName="tag_name" />
+          <BlogsPanel class="w-full" :tagName="categories_blog" />
         </div>
       </section>
 
@@ -84,14 +86,25 @@ import BlogsPanel from '../../components/BlogsPanel.vue';
 import WebFooter from '../../components/WebFooter.vue';
 import { ref } from 'vue';
 
-let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artificial Intelligence', 'Work'], second_part: ['Guidelines', 'Mentorship', 'Tutorial', 'Training', 'Career', 'Self Care'] }
+let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artificial Intelligence', 'Work'], second_part: ['Guidelines', 'Mentorship', 'Tutorial', 'Training', 'AI', 'Self Care'] }
 
 const buttons_names = ['All', 'Design Thinking', 'Technology', 'Web3', 'Programming', 'AI']
 
 let tag_name = ref('All')
+let category_name = ref('')
+let categories_blog = ref('All')
+
 
 function toggleFunction(name) {
   tag_name.value = name
+  categories_blog.value = name
+  category_name.value = "";
+}
+
+function filterByCategory(category) {
+  category_name.value = category;
+  categories_blog.value = category
+  tag_name.value = ""
 }
 
 </script>

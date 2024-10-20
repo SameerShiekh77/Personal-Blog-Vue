@@ -1,4 +1,5 @@
 <script setup>
+import { isArray } from '@vue/shared';
 import BlogCard from './BlogCard.vue';
 
 let data = [
@@ -72,6 +73,7 @@ let data = [
 
     }
 ]
+let blogAvailable = true
 
 defineProps({
     tagName: String
@@ -79,20 +81,32 @@ defineProps({
 
 const showAllData = (tag = 'All') => {
     if (tag === 'All') {
+        blogAvailable = true
         return data; // Return all data if the tag is 'All'
     }
-    return data.filter(item => item.tag_name === tag); // Filter based on tag_name
+    if (data.filter(item => item.tag_name === tag) != "") {
+        blogAvailable = true
+        return data.filter(item => item.tag_name === tag); // Filter based on tag_name
+
+    }
+    else {
+        blogAvailable = false
+    }
 }
 
 </script>
 
 
 <template>
-    <div class="flex flex-col h-[51rem] max-h-1/2 overflow-y-scroll">
+    <div class="flex flex-col max-h-[51rem] h-full" :class="{ 'overflow-y-scroll': showAllData(tagName)?.length > 3 }">
 
-        <BlogCard v-for="(i, index) in showAllData(tagName)" :key="index" :date="i.date" :title="i.title"
-            :description="i.description" :author="i.author" :approximate_time="i.approximate_time"
+        <BlogCard v-show="blogAvailable" v-for="(i, index) in showAllData(tagName)" :key="index" :date="i.date"
+            :title="i.title" :description="i.description" :author="i.author" :approximate_time="i.approximate_time"
             :tag_name="i.tag_name" :image="i.image" />
+        <div v-show="!blogAvailable">
+            <h1 class="text-5xl font-bold text-center flex justify-center items-center align-middle py-48">No Blog Found
+            </h1>
+        </div>
     </div>
 
 
