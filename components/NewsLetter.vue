@@ -1,7 +1,5 @@
-<script setup>
-</script>
-
 <template>
+
     <section class="bg-[url('../public/footer-bg.png')] py-3 my-12">
 
         <div class="px-40 py-7 space-y-4">
@@ -20,6 +18,7 @@
             <p class="text-base">*You can unsubscribe anytime</p>
         </div>
 
-    </section>
 
+
+    </section>
 </template>

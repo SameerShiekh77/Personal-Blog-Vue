@@ -9,7 +9,9 @@ import { RouterLink } from 'vue-router'
         <div class="logo flex space-x-20 items-center">
             <div class="flex space-x-3 items-center">
                 <img src="../public/logo.png" alt="">
-                <h1 class="font-semibold text-3xl">Coranu</h1>
+                <RouterLink to="/">
+                    <h1 class="font-semibold text-3xl">Coranu</h1>
+                </RouterLink>
             </div>
             <div class="flex items-center  rounded-full shadow-md py-2 px-6 w-96 border border-[#DADADA]">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 ml-2" fill="none"
@@ -37,12 +39,13 @@ import { RouterLink } from 'vue-router'
                 <li>
                     <RouterLink to="#" class="text-gray-400 text-lg cursor-pointer hover:underline">Blog</RouterLink>
                 </li>
-                <li>
-                    <RouterLink to="#" class="text-gray-400 text-lg cursor-pointer hover:underline">Career</RouterLink>
-                    <span class="mx-3 rounded-full px-2 bg-[#1C5CFF] text-white">hiring</span>
-                </li>
+
                 <li>
                     <RouterLink to="#" class="text-gray-400 text-lg cursor-pointer hover:underline">Contact</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="#" class="text-gray-400 text-lg cursor-pointer hover:underline">Career</RouterLink>
+                    <span class="mx-3 rounded-full px-3 bg-[#1C5CFF] text-white">hiring</span>
                 </li>
             </ul>
         </div>

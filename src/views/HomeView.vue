@@ -72,7 +72,7 @@
       </section>
 
       <!-- footer section -->
-      <WebFooter />
+      <Footer />
     </div>
   </div>
 </template>
@@ -83,7 +83,7 @@ import NavBar from '../../components/NavBar.vue';
 import SideFilter from '../../components/SideFilter.vue';
 import SimpleButton from '../../components/SimpleButton.vue';
 import BlogsPanel from '../../components/BlogsPanel.vue';
-import WebFooter from '../../components/WebFooter.vue';
+import Footer from '../../components/Footer.vue';
 import { ref } from 'vue';
 
 let links = { first_part: ['Company', 'Design', 'Technology', 'Crypto', 'Artificial Intelligence', 'Work'], second_part: ['Guidelines', 'Mentorship', 'Tutorial', 'Training', 'AI', 'Self Care'] }

@@ -1,5 +1,6 @@
 <script setup>
 import SimpleButton from './SimpleButton.vue';
+import { RouterLink } from 'vue-router';
 defineProps({
     date: String,
     title: String,
@@ -7,7 +8,9 @@ defineProps({
     author: String,
     approximate_time: String,
     tag_name: String,
-    image: String
+    image: String,
+    id:String
+
 })
 </script>
 
@@ -16,7 +19,11 @@ defineProps({
     <div class="flex justify-around my-7 mx-16 ">
         <div class="space-y-4">
             <p class="text-[#1C5CFF]">{{ date }}</p>
-            <h1 class="text-4xl font-bold w-[700px]">{{ title }}
+            <h1 class="text-4xl font-bold w-[700px]">
+                <RouterLink :to="{ name: 'Blog', params: { id: id } }"  class="cursor-pointer">
+                    {{ title }}
+
+                </RouterLink>
             </h1>
             <p class="text-[#7D7D7D] w-[700px]">{{ description }}</p>
             <div class="flex  items-center space-x-9">
